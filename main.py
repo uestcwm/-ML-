@@ -5,7 +5,7 @@ sns.set(context="notebook",style="whitegrid",palette="dark")
 import matplotlib.pyplot as plt
 
 data=pd.read_csv('ex1data1.txt',names=['population','profit'])#读取数据并赋给每列名字
-x='population'
+x='population'#方便下面使用，y也是如此
 y='profit'
 #print(df.describe())#一些属性的显示
 #print(df.info())#info：查看属性索引数据类型大小
@@ -79,8 +79,3 @@ ax.set_xlabel('iterations')
 ax.set_ylabel('cost')
 ax.title('training erroe')
 plt.show()
-
-
-
-
-
