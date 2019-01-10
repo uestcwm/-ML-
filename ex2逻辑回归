@@ -1,0 +1,17 @@
+#逻辑回归
+#首先导入库和可视化数据
+#如果要把一个表格的两类数据分别可视化：按照如下程序
+data=pd.read_csv('ex2data1.txt',header=None,names=['score1','score2','admit'])#读取数据标注前两列
+print(data.head())
+
+#创建两个分类标签的散点图
+positive=data[data['admit'].isin([1])]#这里不太懂
+negative=data[data['admit'].isin([0])]
+
+fig,ax=plt.subplots(figsize=(12,8))
+ax.scatter(positive['score1'],positive['score2'],s=50,c='b',marker='o',label='admit')
+ax.scatter(negative['score1'],negative['score2'],s=50,c='r',marker='x',label='not admit')
+ax.legend()
+ax.set_xlabel('exam 1 score')
+ax.set_ylabel('exam 2 score')
+plt.show()
